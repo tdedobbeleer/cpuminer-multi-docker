@@ -21,7 +21,7 @@ cp cpuminer /usr/bin
 
 #Cleanup
 rm -rf /tmp/*
-apt remove ${DEPENDENCIES}
+apt-get remove ${DEPENDENCIES}
 
 echo
 echo "****************************************************"
