@@ -7,7 +7,9 @@ RUN apt install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-
 WORKDIR /tmp
 
 #Get lib from git
-RUN git clone https://github.com/tpruvot/cpuminer-multi && cd cpuminer-multi
+RUN git clone https://github.com/tpruvot/cpuminer-multi
+
+WORKDIR /tmp/cpuminer-multi
 
 #Make it baby
 RUN ./build.sh
@@ -16,6 +18,9 @@ RUN cp /tmp/cpuminer /usr/bin
 #Get ready
 RUN mkdir /opt/cpuminer
 WORKDIR /opt/cpuminer
+
+#Cleanup
+RUN rm -rf /tmp/*
 
 CMD ["cpuminer", "--config=/opt/cpuminer/config.json"]
 
