@@ -13,7 +13,7 @@ WORKDIR /tmp/cpuminer-multi
 
 #Make it baby
 RUN ./build.sh
-RUN cp /tmp/cpuminer /usr/bin
+RUN cp cpuminer /usr/bin
 
 #Get ready
 RUN mkdir /opt/cpuminer
