@@ -2,7 +2,7 @@
 
 CONFIG=/opt/cpuminer/config.json
 
-if [ -f "$CONFIG" ]; then 
+if [ ! -f "$CONFIG" ]; then 
   echo
   echo ">>> No config file found, specify in ${CONFIG}"
   exit 1
