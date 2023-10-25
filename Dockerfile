@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ENV DEPENDENCIES=automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ git
+ENV DEPENDENCIES="automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ git"
 
 #Dependencies
 RUN apt update
