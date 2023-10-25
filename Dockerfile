@@ -21,8 +21,5 @@ RUN cp cpuminer /usr/bin
 RUN mkdir /opt/cpuminer
 WORKDIR /opt/cpuminer
 
-#Cleanup
-RUN rm -rf /tmp/*
-
-CMD ["cpuminer", "--config=/opt/cpuminer/config.json"]
+CMD ["/mine.sh"]
 
