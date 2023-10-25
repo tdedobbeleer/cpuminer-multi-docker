@@ -17,7 +17,7 @@ RUN mkdir /opt/cpuminer
 WORKDIR /opt/cpuminer
 
 ADD mine.sh /mine.sh
-RUN chown u+x /mine.sh
+RUN chmod u+x /mine.sh
 
 #Clean
 RUN apt remove git
