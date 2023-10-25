@@ -11,12 +11,6 @@ WORKDIR /tmp
 #Get lib from git
 RUN git clone https://github.com/tpruvot/cpuminer-multi
 
-WORKDIR /tmp/cpuminer-multi
-
-#Make it baby
-RUN ./build.sh
-RUN cp cpuminer /usr/bin
-
 #Get ready
 RUN mkdir /opt/cpuminer
 WORKDIR /opt/cpuminer
