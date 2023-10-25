@@ -20,7 +20,8 @@ cd /tmp/cpuminer-multi
 cp cpuminer /usr/bin
 
 #Cleanup
-RUN rm -rf /tmp/*
+rm -rf /tmp/*
+apt remove ${DEPENDENCIES}
 
 echo
 echo "****************************************************"
