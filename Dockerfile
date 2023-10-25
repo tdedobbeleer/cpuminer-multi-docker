@@ -20,7 +20,7 @@ ADD mine.sh /mine.sh
 RUN chmod u+x /mine.sh
 
 #Clean
-RUN apt-get remove git
+RUN apt remove -y git
 
 CMD ["/mine.sh"]
 
